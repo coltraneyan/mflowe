@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cassidy Lowe</title>
+    <link rel="preload" href="assets/bg.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_1.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_2.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_3.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_4.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_5.JPG" as="image" />
+    <link rel="prefetch" href="assets/slide_6.JPG" as="image" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body
+    background="assets/bg.JPG"
+    style="
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+    "
+  >
+    <div
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+        height: 150vh;
+        width: 100vw;
+        z-index: 1;
+      "
+    ></div>
+    <div
+      style="
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 2;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: min-content;
+          color: white;
+        "
+      >
+        <h1>CASSIDY LOWE</h1>
+        <div style="font-family: 'River'">
+          hackney, london |
+          <a
+            style="color: white; text-decoration: none"
+            href="mailto:cassidymlowe@gmail.com"
+            >cassidymlowe@gmail.com</a
+          >
+        </div>
+      </div>
+      <div
+        class="container"
+        style="
+          overflow-y: scroll;
+          margin: 20px auto;
+          padding-bottom: 200px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+        "
+      >
+        <script>
+          [1, 2, 3, 4, 5, 6].forEach((i) => {
+            const img = new Image();
+            img.src = `assets/slide_${i}.JPG`;
+            img.onload = () => {
+              const div = document.createElement("div");
+              const aspectRatio = img.height / img.width;
+              div.style.background = `url(assets/slide_${i}.JPG)`;
+              div.style.width = "60vw";
+              div.style.paddingTop = `${aspectRatio * 60}vw`;
+              div.style.marginBottom = "5vh";
+              div.style.backgroundSize = "cover";
+              div.style.backgroundPosition = "center";
+              document.querySelector(".container").appendChild(div);
+            };
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

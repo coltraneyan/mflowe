@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "River";
+  src: url("assets/river.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Shree";
+  src: url("assets/shree-714.ttf") format("truetype");
+}
+
+body {
+  font-family: "Shree";
+}
