@@ -11,3 +11,13 @@
 body {
   font-family: "Shree";
 }
+
+.contact-info {
+  font-family: "River";
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    font-size: 0.8rem; /* Adjust this value to your preferred size */
+  }
+}

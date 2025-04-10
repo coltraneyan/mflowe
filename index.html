@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body
-    background="assets/bg.webp"
+    background="assets/bg.jpg"
     style="
       background-size: cover;
       background-repeat: no-repeat;
@@ -57,7 +57,7 @@
         "
       >
         <h1>CASSIDY LOWE</h1>
-        <div style="font-family: 'River'">
+        <div class="contact-info">
           hackney, london |
           <a
             style="color: white; text-decoration: none"
@@ -81,7 +81,7 @@
         <script>
           [1, 2, 3, 4, 5, 6].forEach((i) => {
             const img = new Image();
-            img.src = `assets/slide_${i}.JPG`;
+            img.src = `assets/slide_${i}.jpeg`;
             img.onload = () => {
               const div = document.createElement("div");
               div.classList.add("slide");
